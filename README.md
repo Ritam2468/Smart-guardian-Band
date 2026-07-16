@@ -32,7 +32,7 @@ GitHub
 
 ## Circuit Diagram
 
-
+circuit
 
 ## Block Diagram
 
