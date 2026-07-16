@@ -32,7 +32,7 @@ GitHub
 
 ## Circuit Diagram
 
-![Circuit Diagram](Circuit_Diagram/circuit_diagram.png)
+
 
 ## Block Diagram
 
