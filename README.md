@@ -36,7 +36,80 @@ GitHub
 
 ## Block Diagram
 
-[(Add image)](https://github.com/Ritam2468/Smart-guardian-Band/blob/main/Block%20diagram.png)
+                     SMART GUARDIAN BAND
+          IoT Based Women Safety & Health Monitoring System
+
+                                │
+                                ▼
+                    ┌─────────────────────┐
+                    │        ESP32        │
+                    │ Main Microcontroller│
+                    │    Wi-Fi + BLE      │
+                    └─────────────────────┘
+         ┌──────────────┼───────────────┬───────────────┐
+         │              │               │               │
+         ▼              ▼               ▼               ▼
+
+ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
+ │  MAX30102    │ │   MPU6050    │ │   DS18B20    │ │  NEO-6M GPS  │
+ │Heart Rate &  │ │Fall Detection│ │Temperature   │ │GPS Tracking  │
+ │SpO₂ Sensor   │ │Accelerometer │ │Sensor        │ │              │
+ └──────────────┘ └──────────────┘ └──────────────┘ └──────────────┘
+         │              │               │               │
+         └──────────────┴───────────────┴───────────────┘
+                                │
+                                ▼
+                     ┌─────────────────────┐
+                     │   SOS Push Button   │
+                     └─────────────────────┘
+                                │
+                                ▼
+                     ┌─────────────────────┐
+                     │ Data Processing &   │
+                     │ Emergency Decision  │
+                     └─────────────────────┘
+                                │
+      ┌─────────────────────────┼─────────────────────────┐
+      ▼                         ▼                         ▼
+
+┌──────────────┐        ┌──────────────┐         ┌──────────────┐
+│ SIM800L GSM  │        │ Vibration    │         │   Buzzer     │
+│SMS / Call    │        │ Motor Alert  │         │Audio Alert   │
+└──────────────┘        └──────────────┘         └──────────────┘
+      │                         │                         │
+      └───────────────┬─────────┴───────────────┬─────────┘
+                      ▼                         ▼
+              ┌──────────────────────┐
+              │ Cloud / Firebase     │
+              │ Data Logging         │
+              └──────────────────────┘
+                      │
+                      ▼
+              ┌──────────────────────┐
+              │ Android Mobile App   │
+              │ Caregiver Dashboard  │
+              └──────────────────────┘
+                      │
+                      ▼
+              ┌──────────────────────┐
+              │ User / Caretaker     │
+              │ Emergency Contacts   │
+              └──────────────────────┘
+
+────────────────────────────────────────────────────────────
+
+Power Supply
+
+Li-ion Battery (3.7V)
+        │
+        ▼
+TP4056 Charging Module
+        │
+        ▼
+3.3V Voltage Regulator
+        │
+        ▼
+ESP32 + All Modules
 
 ## Working
 
