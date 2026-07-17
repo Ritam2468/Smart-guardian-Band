@@ -36,7 +36,7 @@ GitHub
 
 ## Block Diagram
 
-(Add image)
+[(Add image)](https://github.com/Ritam2468/Smart-guardian-Band/blob/main/Block%20diagram.png)
 
 ## Working
 
